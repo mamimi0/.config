@@ -217,8 +217,3 @@ exec setxkbmap -layout us,latam -option 'grp:ctrl_alt_toggle'
 exec_always --no-startup-id ~/scripts/polystart
 exec --no-startup-id ~/scripts/i3-battery-popup -n -t 60s -L 10 -m 'Battery is low'
 exec --no-startup-id redshift-gtk
-
-#i3fyra
-  # default layout:
-set $layout 'AB=-370 BD=250 AC=125'
-exec --no-startup-id exec i3fyra -l $layout

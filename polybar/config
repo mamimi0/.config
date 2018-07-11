@@ -1,4 +1,5 @@
-#Requires FontAesome 4
+#Requires FontAesome 4, it deppens on your .Xresources, .Xdefaults color scheme.
+
 [colors]
 background = ${xrdb:color0:#222}
 foreground = ${xrdb:color7:#222}

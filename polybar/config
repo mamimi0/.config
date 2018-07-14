@@ -1,5 +1,4 @@
-#Requires FontAesome 4, it deppens on your .Xresources, .Xdefaults color scheme.
-
+#Requires FontAesome 4
 [colors]
 background = ${xrdb:color0:#222}
 foreground = ${xrdb:color7:#222}
@@ -101,6 +100,7 @@ label-mode-background = ${colors.primary}
 label-focused = %icon%
 label-visible = %icon%
 label-unfocused = %icon%
+label-urgent = %icon% 
 
 ws-icon-0 = 1;一
 ws-icon-1 = 2;二
@@ -120,7 +120,6 @@ label-unfocused-padding = ${module/bspwm.label-occupied-padding}
 ; visible = Active workspace on unfocused monitor
 label-visible-background = ${self.label-focused-background}
 label-visible-padding = ${self.label-focused-padding}
-label-urgent = ${colors.alert}
 label-urgent-background = ${module/bspwm.label-urgent-background}
 label-urgent-padding = ${module/bspwm.label-urgent-padding}
 
@@ -212,8 +211,7 @@ type = internal/date
 interval = 0.0 
 
 date = "%a"
-;date-alt = " %EY-%m-%d"
-date-alt = " %EY-%m-%d"
+date-alt = " %y-%m-%d"
 
 time = "%H:%M:%S "
 time-alt = %H:%M:%S

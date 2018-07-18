@@ -112,6 +112,8 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+# Lockscreen
+bindsym $mod+Shift+x exec $HOME/.config/i3/Lockscreen.sh 
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -151,13 +153,18 @@ bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 5%- && pkill -RTMI
 # Mute
 bindsym XF86AudioMute exec amixer sset Master toggle && killall -USR1 i3blocks
 
+# Screenshot
+bindsym Print exec scrot 'scrot_%Y-%m-%d-%T_$wx$h.png' -e 'mv $f ~/Pictures/Screenshots'
+
 # Autostart
 exec --no-startup-id nm-applet
 exec --no-startup-id compton
 exec --no-startup-id "nitrogen --restore"
 exec --no-startup-id xinput set-prop "AlpsPS/2 ALPS DualPoint TouchPad" "libinput Tapping Enabled" 1 
+exec --no-startup-id redshift
+exec --no-startup-id dbus-update-activation-environment --systemd --all
 # Keyboard layouts
-exec setxkbmap -layout us,latam -option 'grp:ctrl_a_toggle'
+exec setxkbmap -layout us,latam -option 'grp:ctrl_alt_toggle'
 # Polybar
 exec_always --no-startup-id $HOME/scripts/plstart.sh
 

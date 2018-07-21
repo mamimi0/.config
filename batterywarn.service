@@ -1,0 +1,5 @@
+[Unit]
+Description=Send a notification
+
+[Service]
+ExecStart=/usr/local/bin/battery.sh

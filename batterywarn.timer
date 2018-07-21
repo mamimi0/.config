@@ -1,0 +1,12 @@
+[Unit]
+Description=Runs batterywarn every hour
+
+[Timer]
+# Time to wait after booting before we run first time
+OnBootSec=2min
+# Time between running each consecutive time
+OnUnitActiveSec=1min
+Unit=batterywarn.service
+
+[Install]
+WantedBy=multi-user.target

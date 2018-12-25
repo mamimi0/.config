@@ -141,7 +141,7 @@ bindsym $mod+r mode "resize"
 
 # Floating Windows
 for_window [class="Nitrogen"] floating enable
-for_window [class="PlayOnLinux"] floating enable
+for_window [class="openmw-launcher.x86_64"] floating enable
 
 # Special keys
 
@@ -161,6 +161,7 @@ bindsym Print exec scrot 'scrot_%Y-%m-%d-%T_$wx$h.png' -e 'mv $f ~/Pictures/Scre
 bindsym Shift+Print exec scrot -u 'scrot_%Y-%m-%d-%T_$wx$h.png' -e 'mv $f ~/Pictures/Screenshots'
 
 # Autostart
+exec --no-startup-id wal -R
 exec --no-startup-id nm-applet
 exec --no-startup-id redshift -l 5.31921:-72.38488 -t 5700:4000 -g 0.8 -m randr -v &
 exec --no-startup-id compton

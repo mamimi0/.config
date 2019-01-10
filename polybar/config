@@ -11,7 +11,7 @@ alert = #ff6961
 [bar/example]
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
-height = 23
+height = 22
 fixed-center = true
 override-redirect = false
 wm-restack = i3
@@ -26,7 +26,7 @@ padding-right = 1
 module-margin-left = 1 
 module-margin-right = 1
 
-font-0 = SanFranciscoDisplay-Medium:pixelsize=10;1
+font-0 = SanFranciscoDisplay-Medium:pixelsize=10;2
 font-1 = SourceHansSansJP-ExtraLight:fontformat=truetype:size=9:antialias=false;1
 font-2 = "FontAwesome:style=Regular:pixelsize=11;2"
 
@@ -209,10 +209,9 @@ format-disconnected =
 [module/date]
 type = internal/date
 interval = 0.0 
-
+module-margin-left = 3
 date = "%a"
 date-alt = " %y-%m-%d"
-
 time = "%H:%M:%S "
 time-alt = %H:%M:%S
 

@@ -1,6 +1,6 @@
 @font-face {
 	font-family: 'CyberpunkWaifus';
-src: local('CyberpunkWaifus'), local('CyberpunkWaifus'), url(https://github.com/dangeru/danger-u-/blob/master/static/CyberpunkWaifus.woff) format('woff');
+        src: local('CyberpunkWaifus'), local('CyberpunkWaifus'), url(https://github.com/dangeru/danger-u-/blob/master/static/CyberpunkWaifus.woff) format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
